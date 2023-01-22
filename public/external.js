@@ -1,4 +1,4 @@
-export const mount = (elRoot) => {
+export const mount = ({ elRoot }) => {
   console.log('mount external');
   elRoot.textContent = 'External!';
 

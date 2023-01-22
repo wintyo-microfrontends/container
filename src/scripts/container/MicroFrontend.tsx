@@ -1,4 +1,5 @@
 import { FC, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { fetchMicroFrontend } from '../utils/fetchExternalModule';
 
 export type MicroFrontendContainerProps = {
@@ -10,6 +11,7 @@ export const MicroFrontendContainer: FC<MicroFrontendContainerProps> = (
   props
 ) => {
   const elRootRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     console.log('mount');
@@ -20,7 +22,14 @@ export const MicroFrontendContainer: FC<MicroFrontendContainerProps> = (
         return;
       }
       unmountMicroFrontend =
-        elRootRef.current && microFrontend.mount(elRootRef.current);
+        elRootRef.current &&
+        microFrontend.mount({
+          elRoot: elRootRef.current,
+          externalRoute: (path) => {
+            console.log('external navigate', path);
+            navigate(path);
+          },
+        });
     });
 
     return () => {

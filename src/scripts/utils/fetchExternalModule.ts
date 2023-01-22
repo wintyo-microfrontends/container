@@ -1,7 +1,12 @@
+export type MountProps = {
+  elRoot: HTMLElement;
+  externalRoute: (path: string) => void;
+};
+
 type unmount = () => void;
 
 export type MicroFrontend = {
-  mount: (elRoot: HTMLElement) => unmount;
+  mount: (props: MountProps) => unmount;
 };
 
 const checkIsMicroFrontend = (mod: unknown): mod is MicroFrontend => {
