@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const config: webpack.Configuration = {
   target: 'web',
@@ -34,6 +35,9 @@ const config: webpack.Configuration = {
       template: path.resolve(__dirname, './src/html/index.html'),
       hash: true,
       inject: true,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: path.resolve(__dirname, 'public') }],
     }),
   ],
 };
