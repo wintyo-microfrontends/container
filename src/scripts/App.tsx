@@ -1,11 +1,6 @@
 import { FC } from 'react';
 import { hot } from 'react-hot-loader';
-import { Routes, Route, Link } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { External } from './pages/External';
-import { Page1 } from './pages/Page1';
-import { Page2 } from './pages/Page2';
-import { ReactApp } from './pages/ReactApp';
+import { Link, Outlet } from 'react-router-dom';
 
 const App: FC = () => {
   return (
@@ -19,13 +14,7 @@ const App: FC = () => {
         <Link to="/page2">Page2</Link>
       </div>
       <hr />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/external/*" element={<External />} />
-        <Route path="/react-app/*" element={<ReactApp />} />
-        <Route path="/page1" element={<Page1 />} />
-        <Route path="/page2" element={<Page2 />} />
-      </Routes>
+      <Outlet />
     </div>
   );
 };
