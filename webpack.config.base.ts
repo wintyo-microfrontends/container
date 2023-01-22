@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config: webpack.Configuration = {
   target: 'web',
   entry: {
-    index: [path.resolve(__dirname, './src/scripts/entry.ts')],
+    index: [path.resolve(__dirname, './src/scripts/main.tsx')],
   },
   output: {
     filename: '[name].js',

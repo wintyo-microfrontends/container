@@ -11,7 +11,7 @@
     "strict": true,
     "baseUrl": "./",
     "types": ["@types/node"],
-    "jsx": "react",
+    "jsx": "react-jsx",
     "paths": {
       "~/*": ["src/scripts/*"]
     }
