@@ -37,7 +37,10 @@ const config: webpack.Configuration = {
       inject: true,
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, 'public') }],
+      patterns: [
+        { from: path.resolve(__dirname, 'public') },
+        { from: path.resolve(__dirname, '_redirects') },
+      ],
     }),
   ],
 };
