@@ -9,7 +9,7 @@ const App: FC = () => {
       <div>
         <Link to="/">Home</Link>
         <Link to="/external/">External</Link>
-        <Link to="/react-app/">React App</Link>
+        <Link to="/react-app-vite/">React App</Link>
         <Link to="/page1/">Page1</Link>
         <Link to="/page2/">Page2</Link>
       </div>

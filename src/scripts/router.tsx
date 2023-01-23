@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
         element: <External />,
       },
       {
-        path: 'react-app/*',
+        path: 'react-app-vite/*',
         element: <ReactApp />,
       },
       {
