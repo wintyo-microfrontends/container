@@ -7,7 +7,7 @@ const config = merge(baseConfig, {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: './',
+    publicPath: '/',
   },
 });
 
