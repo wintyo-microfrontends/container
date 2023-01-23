@@ -1,2 +1,4 @@
-/react-app-vite/*  https://wintyo-microfrontends.github.io/react-app-vite/:splat
+/react-app-vite/*.js   https://wintyo-microfrontends.github.io/react-app-vite/:splat.js
+/react-app-vite/*.svg  https://wintyo-microfrontends.github.io/react-app-vite/:splat.svg
+
 /*                 /index.html 200
