@@ -21,6 +21,8 @@ const config = merge(baseConfig, {
     proxy: {
       '/react-app-vite/': {
         target: 'http://localhost:5100/',
+        // 証明書周りで直接アクセスは難しそう
+        // target: 'https://wintyo-microfrontends.github.io/',
         bypass: (req, res, proxyOptions) => {
           // 一番最後に.jsなど拡張子がついている場合はproxyする
           if (/\.[a-z]+$/.test(req.path)) {
