@@ -1,8 +1,3 @@
-# なぜか/react-app-vite/page1がリダイレクトしてしまう。。
-# 指定したパスだけindex.htmlを返すようにした方が良い？
-/react-app-vite/:file.es.js https://wintyo-microfrontends.github.io/react-app-vite/:file.es.js
-/react-app-vite/:file.js    https://wintyo-microfrontends.github.io/react-app-vite/:file.js
-/react-app-vite/:file.svg   https://wintyo-microfrontends.github.io/react-app-vite/:file.svg
-/react-app-vite/*           /index.html 200
+/react-app-vite/lib/*  https://wintyo-microfrontends.github.io/react-app-vite/:splat
 
-/*                 /index.html 200
+/*                     /index.html 200
