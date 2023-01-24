@@ -1,6 +1,6 @@
 /react-app-vite/:file.es.js https://wintyo-microfrontends.github.io/react-app-vite/:file.es.js
 /react-app-vite/:file.js    https://wintyo-microfrontends.github.io/react-app-vite/:file.js
 /react-app-vite/:file.svg   https://wintyo-microfrontends.github.io/react-app-vite/:file.svg
-/react-app-vite/*           https://wintyo-microfrontends.github.io/react-app-vite/:splat
+/react-app-vite/*           /index.html
 
 /*                 /index.html 200
